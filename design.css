@@ -1,0 +1,50 @@
+:root{
+    --primary-color: rgb(121, 218, 11);
+}
+body{
+    margin: 0;
+    background-color: black;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    /* width: 80%; */
+    text-align: center;
+    background-color: black;
+    margin: 0 auto;
+    padding-bottom: 5rem;
+    /* padding-left: 1rem;
+    padding-right: 1rem; */
+}
+label{
+    color: var(--primary-color);
+    /* width: 150px; */
+}
+h1{
+    color: var(--primary-color);
+}
+
+
+#dateOfBirth{
+    width: 132px;
+    margin: auto;
+    margin-bottom: 2rem;
+    border-color: var(--primary-color);
+    text-shadow: yellow;
+}
+#luckyNumber{
+    width: 131px;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    border-color: var(--primary-color);
+}
+#buttonToCheck{
+    width: 80px;
+    border-width: 0.2rem;
+    margin: 0 auto;
+    margin-bottom: 1rem;
+    border-color: var(--primary-color);
+}
+#outPutBox{
+    color: var(--primary-color);
+}
