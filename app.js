@@ -1,10 +1,23 @@
 const dateOfBirth = document.querySelector("#dateOfBirth");
 const luckyNumberInput = document.querySelector("#luckyNumber");
 const buttonToCheck = document.querySelector("#buttonToCheck");
-const outputBox = document.querySelector("#outputBox");
+const outputBox = document.querySelector("#out-putBox");
 buttonToCheck.addEventListener("click",function checkLuckyOrNot(){
     var dob = dateOfBirth.value; 
     var luckyNumber = Number(luckyNumberInput.value);
+    // console.log(dob.getDate());
+    if(dob === '' && luckyNumber === 0)
+    {
+        outputBox.innerHTML = "Enter both details!!! 😒😑😑😑😑😒"
+    }
+    else if(dob === ''){
+        outputBox.innerHTML = "Please enter Your DOB! 😒😒";
+    }
+    else if(luckyNumber === 0)
+    {
+        outputBox.innerHTML = "Please enter your Lucky Number! 😑😑😑😑";
+    }
+    else{
     var dobWithoutHyphen = dob.replaceAll("-","");
     var sum = 0;
     var addingStrings = addBirthDateNumber(sum,dobWithoutHyphen);
@@ -13,6 +26,7 @@ buttonToCheck.addEventListener("click",function checkLuckyOrNot(){
     // console.log(sum);
     // console.log(luckyNumber);
     checkDivisbleOrNot(addingStrings,luckyNumber);
+    }
 });
 function addBirthDateNumber(sum,dob){
     for(var i=0;i<dob.length;i++)
@@ -23,7 +37,7 @@ function addBirthDateNumber(sum,dob){
 }
 function checkDivisbleOrNot(addingStrings,luckyNumber){
     if(addingStrings % luckyNumber === 0){
-        outPutBox.innerText="Your birthday is lucky 🥳🤩";}
-        else{
-        outPutBox.innerText="Your birthday is not lucky 😐😶😐";}
+        outputBox.innerHTML="Your birthday is lucky 🥳🤩";}
+    else{
+        outputBox.innerHTML="Your birthday is not lucky 😐😶😐";}
 }
