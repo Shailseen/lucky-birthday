@@ -48,3 +48,6 @@ h1{
 #out-putBox{
     color: var(--primary-color);
 }
+.note{
+    color: var(--primary-color);
+}
